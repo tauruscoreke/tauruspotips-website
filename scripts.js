@@ -38,8 +38,8 @@ function handleSignup(event) {
     // Reset form
     form.reset();
     
-    // TODO: Integrate M-Pesa payment here
     console.log('User registered:', userData);
+    console.log('All users:', JSON.parse(localStorage.getItem('taurustips_users')));
 }
 
 // Smooth scrolling for nav links
@@ -55,7 +55,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Load users from localStorage (for admin panel later)
+// Load users from localStorage
 function loadUsers() {
     const users = JSON.parse(localStorage.getItem('taurustips_users')) || [];
     console.log('Registered users:', users);
